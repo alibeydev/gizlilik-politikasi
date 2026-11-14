@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizlilik Politikası</title>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #2563eb;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --bg-body: #f1f5f9;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            padding: 40px 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.02);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 48px 50px;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        .header-badge {
+            display: inline-block;
+            background-color: rgba(37, 99, 235, 0.25);
+            color: #93c5fd;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(147, 197, 253, 0.3);
+        }
+
+        .header h1 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .header-meta {
+            font-size: 0.92rem;
+            color: #cbd5e1;
+        }
+
+        .content {
+            padding: 48px 50px;
+        }
+
+        .notice-box {
+            background-color: var(--badge-bg);
+            border-left: 4px solid var(--accent-color);
+            padding: 20px 24px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 36px;
+        }
+
+        .notice-box strong {
+            display: block;
+            color: var(--primary-color);
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .notice-box p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #1e3a8a;
+        }
+
+        section {
+            margin-bottom: 34px;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 span.num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-size: 0.8rem;
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        p {
+            margin-bottom: 14px;
+            font-size: 0.98rem;
+            text-align: justify;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 12px;
+            margin-bottom: 16px;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 12px;
+            font-size: 0.97rem;
+            text-align: justify;
+        }
+
+        ul li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        a:hover {
+            border-bottom-color: var(--accent-color);
+        }
+
+        .contact-card {
+            background-color: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-top: 16px;
+        }
+
+        .contact-card p {
+            margin-bottom: 6px;
+            text-align: left;
+        }
+
+        .contact-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer {
+            background-color: #f8fafc;
+            border-top: 1px solid var(--border-color);
+            padding: 24px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 16px 12px;
+            }
+            .header, .content {
+                padding: 32px 24px;
+            }
+            .header h1 {
+                font-size: 1.65rem;
+            }
+            .footer {
+                padding: 20px 24px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-badge">Resmi Aydınlatma Metni</div>
+            <h1>Gizlilik Politikası</h1>
+            <div class="header-meta">Yürürlük ve Son Güncelleme Tarihi: 14 Kasım 2026</div>
+        </header>
+
+        <main class="content">
+            <div class="notice-box">
+                <strong>Temel Gizlilik Taahhüdümüz: Verileriniz Yalnızca Cihazınızda Saklanır</strong>
+                <p>Uygulamamız "gizlilik odaklı" mimari ile geliştirilmiştir. Tarafımıza ait hiçbir sunucuda kişisel verileriniz toplanmaz, kaydedilmez, işlenmez veya üçüncü taraflara aktarılmaz. Uygulama içi tercihleriniz ve verileriniz yalnızca kendi cihazınızın yerel depolama alanında tutulur.</p>
+            </div>
+
+            <section>
+                <h2><span class="num">1</span> Amaç ve Kapsam</h2>
+                <p>İşbu Gizlilik Politikası, mobil uygulamamızı ("Uygulama") indiren ve kullanan gerçek kişilerin ("Kullanıcı") veri gizliliğine ilişkin esasları, cihaz izinlerinin kullanım amaçlarını ve üçüncü taraf hizmet sağlayıcıların çalışma prensiplerini düzenlemek amacıyla hazırlanmıştır. Uygulamayı cihazınıza kurarak ve kullanarak işbu politikada belirtilen hükümleri kabul etmiş sayılırsınız.</p>
+            </section>
+
+            <section>
+                <h2><span class="num">2</span> Yerel Veri Depolama ve Sunucu Politikası</h2>
+                <p>Geliştirici olarak kullanıcılarımızın kişisel mahremiyetine azami düzeyde saygı göstermekteyiz. Bu doğrultuda:</p>
+                <ul>
+                    <li><strong>Sunucu Tabanlı Kayıt Tutulmaması:</strong> Ad, soyad, kimlik bilgisi, telefon numarası, e-posta adresi veya kullanıcı geçmişi gibi hiçbir kişisel veri geliştirici sunucularına gönderilmez ve harici veritabanlarında depolanmaz.</li>
+                    <li><strong>Cihaz İçi Yerel Saklama (Local Storage):</strong> Uygulamanın temel işlevlerini yerine getirebilmesi için gerekli olan ayarlar, tercihler ve önbellek verileri yalnızca kullanıcının kendi mobil cihazının yerel hafızasında saklanır. Kullanıcı uygulamayı cihazından kaldırdığında veya uygulama verilerini temizlediğinde bu veriler kalıcı olarak silinir.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="num">3</span> Uygulama İzinleri ve Kullanım Esasları</h2>
+                <p>Uygulamamız, yalnızca ilgili özelliğin çalışabilmesi için zorunlu olan cihaz izinlerini kullanıcının açık onayına (opt-in) sunarak talep eder:</p>
+                <ul>
+                    <li><strong>Konum İzni (Location):</strong> Uygulama içerisindeki konum tabanlı sorgulama, yakın nokta listeleme ve harita yönlendirme özelliklerinin çalışabilmesi amacıyla yalnızca kullanım anında cihaz konumuna erişim sağlanır. Konum veriniz anlık olarak cihaz üzerinde işlenir; hiçbir sunucuya kaydedilmez ve geçmiş konum kaydı tutulmaz.</li>
+                    <li><strong>Anlık Bildirim İzni (Push Notifications):</strong> Kullanıcıya önemli bilgilendirmeler, hizmet güncellemeleri ve hatırlatmaların iletilebilmesi için bildirim izni talep edilebilir. Kullanıcılar cihazlarının sistem ayarları üzerinden bildirim izinlerini diledikleri zaman iptal edebilirler.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="num">4</span> Reklam Hizmetleri ve Üçüncü Taraf Sağlayıcılar</h2>
+                <p>Uygulamanın ücretsiz olarak sunulabilmesi ve sürdürülebilirliğinin sağlanması amacıyla uygulama içerisinde <strong>Google AdMob</strong> reklam altyapısı kullanılmaktadır. Geliştirici tarafından veri toplanmamakla birlikte, entegre edilen üçüncü taraf reklam sağlayıcısı kendi gizlilik politikaları çerçevesinde teknik verileri işleyebilir:</p>
+                <ul>
+                    <li><strong>Google AdMob:</strong> Reklam gösterimi, sıklık sınırlandırması ve ilgi alanına dayalı reklam sunumu amacıyla cihazınızın reklam kimliğini (Google Advertising ID), IP adresini ve standart teknik tanımlayıcıları işleyebilir.</li>
+                    <li>Kullanıcılar, cihazlarının <em>Ayarlar &gt; Google &gt; Reklamlar</em> menüsünden reklam kimliklerini sıfırlayabilir veya kişiselleştirilmiş reklamları devre dışı bırakabilirler. Detaylı bilgi için <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Reklam ve Gizlilik Politikası</a> sayfasını inceleyebilirsiniz.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="num">5</span> Veri Güvenliği</h2>
+                <p>Verileriniz harici bir sunucuya aktarılmayıp doğrudan cihazınızın işletim sistemi koruması altında tutulduğundan, veri güvenliği büyük ölçüde cihazınızın fiziksel ve yazılımsal güvenliğine (ekran kilidi, işletim sistemi güncellemeleri vb.) bağlıdır. Uygulama, standart güvenlik protokollerine uygun olarak geliştirilmiştir.</p>
+            </section>
+
+            <section>
+                <h2><span class="num">6</span> Çocukların Gizliliği</h2>
+                <p>Uygulamamız 13 yaşın altındaki çocuklara yönelik değildir ve bu yaş grubundaki bireylerden bilerek hiçbir kişisel veri toplamaz. Ebeveyn veya yasal vasilerin, çocuklarının bilgisi dahilinde olmadan herhangi bir veri paylaşımı gerçekleştiğini düşünmeleri halinde aşağıdaki iletişim adresi üzerinden bizimle irtibata geçmeleri rica olunur.</p>
+            </section>
+
+            <section>
+                <h2><span class="num">7</span> Politika Güncellemeleri</h2>
+                <p>Yasal mevzuattaki değişiklikler veya uygulamaya eklenecek yeni özellikler doğrultusunda işbu Gizlilik Politikası güncellenebilir. Güncellenen metin bu sayfada yayınlandığı tarihten itibaren geçerlilik kazanır.</p>
+            </section>
+
+            <section>
+                <h2><span class="num">8</span> İletişim</h2>
+                <p>İşbu Gizlilik Politikası, uygulama izinleri veya veri güvenliği uygulamalarımız hakkında her türlü soru, görüş ve talepleriniz için resmi iletişim kanalımız üzerinden bizimle irtibata geçebilirsiniz:</p>
+                <div class="contact-card">
+                    <p><strong>Geliştirici İletişim E-Postası:</strong> <a href="mailto:alibeydeveloper.contact@gmail.com">alibeydeveloper.contact@gmail.com</a></p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2026 Alibey Developer. Tüm Hakları Saklıdır.</span>
+            <span>Gizlilik ve Veri Güvenliği Metni</span>
+        </footer>
+    </div>
+</body>
+</html>
